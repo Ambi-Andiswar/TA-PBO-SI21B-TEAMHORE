@@ -41,7 +41,7 @@ nav ul li a.active {
 }
 .container {
     max-width: 960px;
-    height: 500px;
+    height: auto;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -55,7 +55,73 @@ nav ul li a.active {
 }
 .library p {
     color: #666;
+    text-align: justify;
 }
+.library2 {
+    text-align: justify;
+}
+
+.about-us {
+    padding: 50px 0 px;
+}
+.container-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+.flex {
+    flex: 0 0 30%;
+    max-width: 100%;
+    padding: 10px 50px 0 100px;
+}
+.about-us img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.about-us h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+    color:#333;
+}
+.about-us p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+.about-us img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.social-links{
+    margin-bottom: 20px;
+}
+.social-links a {
+    display:  inline-block;
+    width: 40px;
+    height: 40pxx;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,3);
+    transition: all 0.4s ease;
+}
+.social-links a:hover{
+    transform: translateY(-3px);
+}
+
 .pos {
     display: flex;
     justify-content: space-between;
