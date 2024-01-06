@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Peminjaman Buku</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Koleksi</a></li>
+          <li><a href="#">Peminjaman</a></li>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Akun</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <form id="bookForm">
+      <label for="memberNumber">No Anggota Perpustakaan:</label>
+      <input type="text" id="memberNumber" required>
+
+      <label for="studentName">Nama Siswa:</label>
+      <input type="text" id="studentName" required>
+
+      <label for="class">Kelas:</label>
+      <input type="text" id="class" required>
+
+      <label for="bookcode">Kode Buku:</label>
+      <input type="text" id="class" required>
+
+      <label for="bookname">Nama Buku:</label>
+      <input type="text" id="class" required>
+
+      <label for="subject">Mata Pelajaran:</label>
+      <select id="subject" required>
+        <option value="agama">Agama</option>
+        <option value="pkn">PKN</option>
+        <option value="bahasaIndonesia">Bahasa Indonesia</option>
+        <option value="matematika">Matematika</option>
+        <option value="ipa">IPA</option>
+        <option value="ips">IPS</option>
+        <option value="bahasaInggris">Bahasa Inggris</option>
+        <option value="sbk">SBK</option>
+        <option value="penjas">Penjas</option>
+        <option value="informatika">Informatika</option>
+        <option value="bahasaLampung">Bahasa Lampung</option>
+      </select>
+
+      <button type="button" onclick="submitForm()">Pinjam Buku</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
