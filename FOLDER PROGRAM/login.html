@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="styles-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>Halaman Login</header>
+        <form action="main.html">
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="masukan email ">
+                    <i class="icon fas fa-envelope"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Email tidak boleh kosong</div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" placeholder="masukan password">
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Password tidak boleh kosong</div>
+            </div>
+            <div class="pass-txt"><a href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&dsh=S973139674%3A1705676937161661&ec=GAlAwAE&flowEntry=AddSession&flowName=GlifWebSignIn&hl=in&service=accountsettings&theme=glif&authuser=0">Lupa password?</a></div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script src="script-login.js"></script>
+
+</body>
+
+</html>
