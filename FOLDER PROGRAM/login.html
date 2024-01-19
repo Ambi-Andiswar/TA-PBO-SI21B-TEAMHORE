@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-login.css">
+    <title>Login - Perpustakaan SMPN 1 JATI AGUNG</title>
+</head>
+<body>
+    <header>
+        <h1>PERPUSTAKAAN</h1>
+        <h1>SMPN 1 JATI AGUNG </h1>
+    </header>
+
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="error-message" id="error-message"></div>
+
+            <button type="button" onclick="validateForm()">Login</button>
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <span class="popuptext" id="popuptext">Harap isi semua kolom</span>
+    </div>
+
+    <script src="script-login.js"></script>
+</body>
+</html>
