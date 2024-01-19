@@ -55,6 +55,10 @@ nav ul li a.active {
 }
 .library p {
     color: #666;
+<<<<<<< HEAD
+=======
+    text-align: center;
+>>>>>>> 78b1c3cc7bc37be24a6c57f2781209939170e335
 }
 .library2 {
     text-align: justify;
