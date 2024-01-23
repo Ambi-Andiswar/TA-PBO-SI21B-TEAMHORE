@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
-    <link rel="stylesheet" href="styles-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Login Perpustakaan SMPN 1 JATI AGUNG</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(image/bg5.jpg);
+        }
+
+        .login-container {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .login-container:hover {
+            transform: scale(1.05);
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .login-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 600px) {
+            .login-container {
+                width: 80%;
+            }
+        }
+    </style>
+
+    <!-- Include Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="wrapper">
-        <header>Halaman Login</header>
-        <form action="main.html">
-            <div class="field email">
-                <div class="input-area">
-                    <input type="text" placeholder="masukan email ">
-                    <i class="icon fas fa-envelope"></i>
-                    <i class="error error-icon fas fa-exclamation-circle"></i>
-                </div>
-                <div class="error error-txt">Email tidak boleh kosong</div>
-            </div>
-            <div class="field password">
-                <div class="input-area">
-                    <input type="password" placeholder="masukan password">
-                    <i class="icon fas fa-lock"></i>
-                    <i class="error error-icon fas fa-exclamation-circle"></i>
-                </div>
-                <div class="error error-txt">Password Tidak Boleh Kosong</div>
-            </div>
-            <div class="pass-txt"><a href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&dsh=S973139674%3A1705676937161661&ec=GAlAwAE&flowEntry=AddSession&flowName=GlifWebSignIn&hl=in&service=accountsettings&theme=glif&authuser=0">Lupa password?</a></div>
-            <input type="submit" value="Login">
-        </form>
-    </div>
 
-    <script src="script-login.js"></script>
+<div class="login-container">
+    <h2>Login Perpustakaan SMPN 1 JATI AGUNG</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="button" class="login-btn" onclick="validateLogin()">Login</button>
+    </form>
+</div>
+
+<script>
+    function validateLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'admin' && password === 'admin') {
+            // Redirect to the next page or perform any desired action
+            alert('Login successful! Redirecting...');
+            window.location.href = 'class.html';
+        } else {
+            alert('Gagal masuk. Silahkan periksa username dan password Anda.');
+        }
+    }
+
+    // Add event listener for window resize
+    window.addEventListener('resize', function () {
+        // You can add additional responsive adjustments here if needed
+    });
+</script>
 
 </body>
-
 </html>
