@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles-peminjaman.css">
-  <title>Peminjaman Buku</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .area_component {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.area_label {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.area_input {
+    width: 70%;
+}
+
+/* Add the following style to make the subject container wider */
+.area_component .area_input select {
+    width: 100%; /* Set the width to 100% for the subject dropdown */
+}
+
+        .txt_component {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .btn_component {
+            outline: 0;
+            border-radius: 25px;
+            border: 1px solid #333333;
+            height: 40px;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: #3498db;
+            color: #fff;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn_component:hover {
+            background-color: #2980b9;
+        }
+
+        .btn_remove {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+<<<<<<< HEAD
   <header>
     <nav>
         <ul>
@@ -14,7 +100,7 @@
           <li><a href="koleksi.html">Koleksi</a></li>
           <li><a href="peminjaman.html">Peminjaman</a></li>
           <li><a href="about.html">Tentang Kami</a></li>
-          <li><a href="index.html">Akun</a></li>
+          <li><a href="akun.html">Akun</a></li>
         </ul>
       </nav>
   </header>
@@ -22,37 +108,191 @@
     <form id="bookForm">
       <label for="memberNumber">No Anggota Perpustakaan:</label>
       <input type="text" id="memberNumber" required>
+=======
+>>>>>>> 38c01cb47b8959b0982a78ca6903059ea9e42f1c
 
-      <label for="studentName">Nama Siswa:</label>
-      <input type="text" id="studentName" required>
+<div class="container">
 
-      <label for="class">Kelas:</label>
-      <input type="text" id="class" required>
+    <!-- Area Component 1 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="memberNumber">No Anggota Perpustakaan:</label>
+        </div>
+        <div class="area_input">
+            <input type="text" id="memberNumber" placeholder="Isi No Anggota Perpustakaan" class="txt_component">
+        </div>
+    </div>
 
-      <label for="bookcode">Kode Buku:</label>
-      <input type="text" id="class" required>
+    <!-- Area Component 2 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="studentName">Nama Siswa:</label>
+        </div>
+        <div class="area_input">
+            <input type="text" id="studentName" placeholder="Isi Nama Siswa" class="txt_component">
+        </div>
+    </div>
 
-      <label for="bookname">Nama Buku:</label>
-      <input type="text" id="class" required>
+    <!-- Area Component 3 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="class">Kelas:</label>
+        </div>
+        <div class="area_input">
+            <input type="text" id="class" placeholder="Isi Kelas" class="txt_component">
+        </div>
+    </div>
 
-      <label for="subject">Mata Pelajaran:</label>
-      <select id="subject" required>
-        <option value="agama">Agama</option>
-        <option value="pkn">PKN</option>
-        <option value="bahasaIndonesia">Bahasa Indonesia</option>
-        <option value="matematika">Matematika</option>
-        <option value="ipa">IPA</option>
-        <option value="ips">IPS</option>
-        <option value="bahasaInggris">Bahasa Inggris</option>
-        <option value="sbk">SBK</option>
-        <option value="penjas">Penjas</option>
-        <option value="informatika">Informatika</option>
-        <option value="bahasaLampung">Bahasa Lampung</option>
-      </select>
+    <!-- Area Component 4 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="bookcode">Kode Buku:</label>
+        </div>
+        <div class="area_input">
+            <input type="text" id="bookcode" placeholder="Isi Kode Buku" class="txt_component">
+        </div>
+    </div>
 
-      <button type="button" onclick="submitForm()">Pinjam Buku</button>
-    </form>
-  </main>
-  <script src="script.js"></script>
+    <!-- Area Component 5 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="bookname">Nama Buku:</label>
+        </div>
+        <div class="area_input">
+            <input type="text" id="bookname" placeholder="Isi Nama Buku" class="txt_component">
+        </div>
+    </div>
+
+    <!-- Area Component 6 -->
+    <div class="area_component">
+        <div class="area_label">
+            <label for="subject">Mata Pelajaran:</label>
+        </div>
+        <div class="area_input">
+            <select id="subject">
+                <option value="" disabled selected>Pilih Mata Pelajaran</option>
+                <option value="agama">Agama</option>
+                <option value="pkn">PKN</option>
+                <option value="bahasaIndonesia">Bahasa Indonesia</option>
+                <option value="matematika">Matematika</option>
+                <option value="ipa">IPA</option>
+                <option value="ips">IPS</option>
+                <option value="bahasaInggris">Bahasa Inggris</option>
+                <option value="sbk">SBK</option>
+                <option value="penjas">Penjas</option>
+                <option value="informatika">Informatika</option>
+                <option value="bahasaLampung">Bahasa Lampung</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- Area Component 7 -->
+    <div class="area_component">
+        <button type="button" class="btn_component" onclick="submitForm()">Pinjam Buku</button>
+    </div>
+
+    <!-- Tabel Data -->
+    <table>
+        <thead>
+            <tr>
+                <th>No Anggota Perpustakaan</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>Kode Buku</th>
+                <th>Nama Buku</th>
+                <th>Mata Pelajaran</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tbl_body_data"></tbody>
+    </table>
+
+</div>
+
+<!-- Internal JavaScript -->
+<!-- Internal JavaScript -->
+<script>
+    let memberNumber = document.getElementById('memberNumber');
+    let studentName = document.getElementById('studentName');
+    let classInput = document.getElementById('class');
+    let bookcode = document.getElementById('bookcode');
+    let bookname = document.getElementById('bookname');
+    let subject = document.getElementById('subject');
+    let tbl_body_data = document.getElementById('tbl_body_data');
+    let data = [];
+
+    // Memeriksa apakah ada data yang disimpan di localStorage
+    if (localStorage.getItem('libraryData')) {
+        data = JSON.parse(localStorage.getItem('libraryData'));
+        viewData();
+    }
+
+    function submitForm() {
+    if (
+        memberNumber.value === '' ||
+        studentName.value === '' ||
+        classInput.value === '' ||
+        bookcode.value === '' ||
+        bookname.value === '' ||
+        subject.value === ''
+    ) {
+        alert('Lengkapi Seluruh Data!');
+    } else {
+        data.push([
+            memberNumber.value,
+            studentName.value,
+            classInput.value,
+            bookcode.value,
+            bookname.value,
+            subject.value || 'Pilih Mata Pelajaran' // Set default value if subject is not selected
+        ]);
+
+        // Menyimpan data ke localStorage setiap kali ada perubahan
+        localStorage.setItem('libraryData', JSON.stringify(data));
+
+        viewData();
+    }
+}
+
+    function viewData() {
+        let tableContent = '';
+        data.forEach((rowData, index) => {
+            tableContent += "<tr>";
+            tableContent += `<td>${rowData[0]}</td>`;
+            tableContent += `<td>${rowData[1]}</td>`;
+            tableContent += `<td>${rowData[2]}</td>`;
+            tableContent += `<td>${rowData[3]}</td>`;
+            tableContent += `<td>${rowData[4]}</td>`;
+            tableContent += `<td>${rowData[5]}</td>`;
+            tableContent += `<td><button class="btn_component btn_remove" onclick="removeData(${index})">Hapus</button></td>`;
+            tableContent += "</tr>";
+        });
+
+        tbl_body_data.innerHTML = tableContent;
+        clearForm();
+    }
+
+    function clearForm() {
+        memberNumber.value = '';
+        studentName.value = '';
+        classInput.value = '';
+        bookcode.value = '';
+        bookname.value = '';
+        subject.value = 'agama';
+    }
+
+    function removeData(index) {
+        if (confirm(`Data Siswa : ${data[index][1]} (index ke-${index}) Ingin Dihapus ?`)) {
+            data.splice(index, 1);
+
+            // Menyimpan data ke localStorage setiap kali ada perubahan
+            localStorage.setItem('libraryData', JSON.stringify(data));
+
+            viewData();
+        }
+    }
+</script>
+
 </body>
 </html>
