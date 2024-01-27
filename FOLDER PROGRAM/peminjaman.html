@@ -17,40 +17,52 @@
         }
 
         header {
-    background: linear-gradient(to right, #00a6a6, #0070b8);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-h1 {
-    margin: 0;
-}
-nav {
-    background: linear-gradient(to right, #00a6a6, #0070b8);
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, .1);
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(to right,#0070b8,#00a6a6);
-}
-nav ul li {
-    margin: 10px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.5s ease;
-}
-nav ul li a:hover, 
-nav ul li a.active {
-    background-color: #005f5f;
-}
+            background: linear-gradient(to right, #00a6a6, #0070b8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .btn-nav {
+            flex: 1;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            background-color: #00a6a600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            background: linear-gradient(to right, #00a6a6, #0070b8);
+            box-shadow: 0px 7px 10px rgba(0, 0, 0, .1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right,#0070b8,#00a6a6);
+        }
+        nav ul li {
+            margin: 0 10px 0 10px;
+        }
+        nav ul li .btn-nav {
+            color: white;
+            font-size: medium;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.5s ease;
+        }
+        nav ul li .btn-nav:hover, 
+        nav ul li .btn-nav.active {
+            background-color: #005f5f;
+        }
 
         .container {
             width: 80%;
@@ -63,24 +75,24 @@ nav ul li a.active {
         }
 
         .area_component {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
 
-.area_label {
-    width: 30%;
-    margin-bottom: 10px;
-}
+        .area_label {
+            width: 30%;
+            margin-bottom: 10px;
+        }
 
-.area_input {
-    width: 70%;
-}
+        .area_input {
+            width: 70%;
+        }
 
 /* Add the following style to make the subject container wider */
-.area_component .area_input select {
-    width: 100%; /* Set the width to 100% for the subject dropdown */
-}
+        .area_component .area_input select {
+            width: 100%; /* Set the width to 100% for the subject dropdown */
+        }
 
         .txt_component {
             width: 100%;
@@ -133,11 +145,11 @@ nav ul li a.active {
     </header>
     <nav>
         <ul>
-          <li><a href="main.html">Beranda</a></li>
-          <li><a href="koleksi.html">Koleksi</a></li>
-          <li><a href="peminjaman.html">Peminjaman</a></li>
-          <li><a href="about.html">Tentang Kami</a></li>
-          <li><a href="akun.html">Akun</a></li>
+            <li><button class="btn-nav" onclick="nav('main.html')">Beranda</button></li>
+            <li><button class="btn-nav" onclick="nav('koleksi.html')">Koleksi</button></li>
+            <li><button class="btn-nav" onclick="nav('peminjaman.html')">Peminjaman</button></li>
+            <li><button class="btn-nav" onclick="nav('about.html')">Tentang Kami</button></li>
+            <li><button class="btn-nav" onclick="nav('akun.html')">Akun</button></li>
         </ul>
       </nav>
   <main>
@@ -246,6 +258,11 @@ nav ul li a.active {
 <!-- Internal JavaScript -->
 <!-- Internal JavaScript -->
 <script>
+    function nav(halaman) {
+        // Redirect ke halaman yang ditentukan
+        window.location.href = halaman;
+    }
+
     let memberNumber = document.getElementById('memberNumber');
     let studentName = document.getElementById('studentName');
     let classInput = document.getElementById('class');
