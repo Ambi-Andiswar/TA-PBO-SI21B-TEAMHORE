@@ -35,8 +35,8 @@
                     <p class="book-details">tahun terbit 2023</p>
                 </div>
                 <div class="button">
-                    <button class="btn">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="pinjam('koleksi.html')">Pinjam</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -49,8 +49,8 @@
                     <p class="book-details">tahun terbit 2023</p>
                 </div>
                 <div class="button">
-                    <button class="btn">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="pinjam('koleksi.html')">Pinjam</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -63,13 +63,21 @@
                     <p class="book-details">tahun terbit 2023</p>
                 </div>
                 <div class="button">
-                    <button class="btn">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="pinjam('koleksi.html')">Pinjam</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
     </div>
     <script>
+        function pinjam(halaman) {
+        // Redirect ke halaman yang ditentukan
+        window.location.href = halaman;
+        }
+        function detail(halaman) {
+        // Redirect ke halaman yang ditentukan
+        window.location.href = halaman;
+        }
          function nav(halaman) {
         // Redirect ke halaman yang ditentukan
         window.location.href = halaman;
