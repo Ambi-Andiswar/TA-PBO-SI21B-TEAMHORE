@@ -12,11 +12,11 @@
     </header>
     <nav>
         <ul>
-            <li><a href="main.html">Beranda</a></li>
-            <li><a href="koleksi.html">Koleksi</a></li>
-            <li><a href="peminjaman.html">Peminjaman</a></li>
-            <li><a href="about.html">Tentang Kami</a></li>
-            <li><a href="akun.html">Akun</a></li>
+            <li><button class="btn-nav" onclick="nav('main.html')">Beranda</button></li>
+            <li><button class="btn-nav" onclick="nav('koleksi.html')">Koleksi</button></li>
+            <li><button class="btn-nav" onclick="nav('peminjaman.html')">Peminjaman</button></li>
+            <li><button class="btn-nav" onclick="nav('about.html')">Tentang Kami</button></li>
+            <li><button class="btn-nav" onclick="nav('akun.html')">Akun</button></li>
         </ul>
     </nav>
     <div class="container">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -101,7 +101,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -152,7 +152,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -166,7 +166,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -203,7 +203,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -217,7 +217,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
             <div class="card">
@@ -254,7 +254,8 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
+
                 </div>
             </div>
             <div class="card">
@@ -268,7 +269,7 @@
                 </div>
                 <div class="button">
                     <button class="btn" onclick="pinjam('peminjaman.html')">Pinjam</button>
-                    <button class="btn">Detail</button>
+                    <button class="btn" onclick="detail('about.html')">Detail</button>
                 </div>
             </div>
         </div>
@@ -278,7 +279,15 @@
          function pinjam(halaman) {
         // Redirect ke halaman yang ditentukan
         window.location.href = halaman;
-    }
+        }
+        function detail(halaman) {
+        // Redirect ke halaman yang ditentukan
+        window.location.href = halaman;
+        }
+        function nav(halaman) {
+           // Redirect ke halaman yang ditentukan
+           window.location.href = halaman;
+        }
     </script>
     <footer>
         &copy; Manager IT 2023/2024 Perpustakaan SMPN 1 Jati Agung. Hak Cipta Dilindungi.
