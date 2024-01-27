@@ -35,8 +35,9 @@
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                     </div>
-                    <a href="" class="btn">Baca Sel...</a>
+                    <button class="btn" id="scrollBtn" onclick="scrollDown()">Baca Sel...</button>
                 </div>
+                
                 <div class="flex">
                     <img src="Images/p3.jpg" alt="">
                 </div>
@@ -99,7 +100,27 @@
         function nav(halaman) {
         // Redirect ke halaman yang ditentukan
         window.location.href = halaman;
-        }   
+        }
+        
+        function scrollDown() {
+                    window.scrollBy({
+                      top: window.innerHeight,
+                      behavior: 'smooth'
+                    });
+                  }
+              
+                  // Show the scroll button when user scrolls past certain point
+                  window.onscroll = function() {
+                    scrollFunction();
+                  };
+              
+                  function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                      document.getElementById("scrollBtn").style.display = "block";
+                    } else {
+                      document.getElementById("scrollBtn").style.display = "none";
+                    }
+                  }
     </script>
 </body>
 </html>
